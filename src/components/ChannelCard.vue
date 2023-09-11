@@ -5,8 +5,11 @@
         <img class="h-[60px] md:h-[100px]" :src="channel.image"/>
       </div>
     </div>
-    <div class="absolute bottom-0 md:-bottom-4 bg-gradient-to-r from-cyan-500 to-blue-500  py-2 px-6 rounded-tr-[36px] text-white font-[600]">
+    <div class="absolute flex flex-row-reverse bottom-0 md:-bottom-4 bg-gradient-to-r from-cyan-500 to-blue-500  py-2 px-6 rounded-tr-[36px] text-white font-[600]">
       {{ channel.name }}
+    </div>
+    <div class=" absolute bottom-[120px]" >
+      <img class="h-[58px] rounded-tr-2xl" src="/image/card.png" />
     </div>
   </div>
 </template>
