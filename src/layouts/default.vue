@@ -2,8 +2,9 @@
 
 </script>
 <template>
-    <div class="text-3xl">
-        <div style="height: 80vh;">
+    <div class="bg-[#2B3A56]">
+        <Header/>
+        <div>
             <NuxtPage />
         </div>
     </div>
