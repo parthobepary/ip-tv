@@ -6,9 +6,9 @@
 <!--       Hero Section -->
        <Video/>
 <!--       Channel Section -->
-       <div class="container mx-auto grid  grid-cols-3 lg:grid-cols-7 py-16 gap-4 px-2 md:px-0">
+       <div class="container mx-auto grid  grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 py-16 gap-4 px-2 md:px-2">
          <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
-           <channel-card :channel="channel" />
+           <channel-card :channel="channel" :index="i" />
          </div>
        </div>
 
