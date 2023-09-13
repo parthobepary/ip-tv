@@ -12,19 +12,24 @@
           <div class="col-span-5 md:col-span-3 w-full px-2 md:px-0">
             <Video />
           </div>
-          <div class="bg-white col-span-5 md:col-span-1 md:w-full my-4 md:my-0 mx-2 md:mx-0 flex justify-center items-center ">
+          <div
+            class="bg-white col-span-5 md:col-span-1 md:w-full my-4 md:my-0 mx-2 md:mx-0 flex justify-center items-center ">
             <p>For Add Section</p>
           </div>
         </div>
       </div>
-<!--      Category Section -->
-      <div class=" mx-3 mt-4 md:mt-8 px-3 md:px-8  inline-flex gap-x-3 md:gap-x-16 bg-gradient-to-r to-cyan-500 from-blue-500  rounded-r-2xl">
-        <div v-for="(category, i) in categories" :key="i" class="">
-            <button @click="toggleActive(i)" :class="isMatch===i ? 'active-button' : ''" class="text-white py-2  md:px-4  font-[600] ">{{ category.name }}</button>
+      <!--      Category Section -->
+      <div class="py-4 mb-3">
+        <div
+          class=" shadow-2xl mx-3 px-3 md:px-8  inline-flex gap-x-3 md:gap-x-16 bg-gradient-to-r to-blue-500 from-cyan-500  rounded-r-2xl">
+          <div v-for="(category, i) in categories" :key="i" class="relative">
+            <button @click="toggleActive(i)" :class="isMatch === i ? 'active-button' : ''"
+              class="text-white py-1  md:px-4  font-[600] ">{{ category.name }}</button>
+          </div>
         </div>
       </div>
       <!--       Channel Section -->
-      <div class="grid  grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 py-6 md:py-8 gap-4 px-2 md:px-2">
+      <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 px-2 md:px-2">
         <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
           <channel-card :channel="channel" :index="i" />
         </div>
@@ -39,11 +44,11 @@ const isActive = ref(false);
 const isMatch = ref(0);
 
 const categories = [
-  { name:"Sports" },
-  { name:"INBangla" },
-  { name:"Hindi" },
-  { name:"English" },
-  { name:"Bangla" },
+  { name: "Sports" },
+  { name: "INBangla" },
+  { name: "Hindi" },
+  { name: "English" },
+  { name: "Bangla" },
 ]
 const channels = [
   { name: "Star Jalsha", image: "/channel/channel1.png" },
@@ -62,7 +67,7 @@ const channels = [
   { name: "Star Sports 2", image: "/channel/channel7.png" }
 ]
 
-const toggleActive =(index)=> {
+const toggleActive = (index) => {
   isMatch.value = index
   isActive.value = !isActive.value
   console.log('ok');
@@ -72,9 +77,18 @@ const toggleActive =(index)=> {
 <style  scoped>
 .active-button {
   height: 100%;
-  background-color: #007bff;
+  background-color: rgb(26, 179, 179);
   color: white;
   border: none;
   cursor: pointer;
+}
+
+.active-button::before {
+  content: "▼";
+  font-size: 36px;
+  color: #3985F5;
+  position: absolute;
+  right: 28%;
+  bottom: -2.2rem;
 }
 </style>
