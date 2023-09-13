@@ -1,34 +1,9 @@
-<!-- <template>
-  <div class="player">
-    <video controls muted autoPlay crossOrigin="anonymous" style="width: 100%; height: 100%;">
-      <source :src="`http://localhost:5000/videos/video/${video.id}`" type="video/mp4">
-      <track label="English" kind="captions" srcLang="en" :src="`http://localhost:5000/videos/video/${video.id}/caption`"
-        default>
-    </video>
-  </div>
-</template>
-
-<script setup>
-const video = {
-  id: "tom-and-jerry",
-  poster: 'https://image.tmdb.org/t/p/w500/fev8UFNFFYsD5q7AcYS8LyTzqwl.jpg',
-  duration: '3 mins',
-  name: 'Tom & Jerry'
-}
-</script>
-<style scoped>
-.player {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style> -->
 
 <template>
   <div>
     <video id="video-player" controls muted
-      class="cld-video-player cld-fluid vjs-live cld-video-player-skin-dark w-2/3 h-96 mx-auto" />
-    <p class="m-5 text-gray-800 text-sm text-center"> </p>
+      class="cld-video-player cld-fluid vjs-live cld-video-player-skin-dark md:w-2/3 h-96 mx-auto" />
+    <p class=" text-gray-800 text-sm text-center"> </p>
   </div>
 </template>
 

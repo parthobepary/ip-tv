@@ -8,7 +8,7 @@
       </div>
       <div :class="index % 2 === 0 ? 'bottom-3' : 'top-3'" class="absolute   w-full left-0">
         <div :class="index % 2 === 0 ? 'rounded-tr-[36px]' : 'rounded-br-[36px]'"
-             class="bg-gradient-to-r w-[80%] from-cyan-500 to-blue-500  py-1 md:py-2 px-2 md:px-6  text-[12px] md:text-[16px] text-white font-[600]">
+             class="bg-gradient-to-r md:w-[80%] from-cyan-500 to-blue-500  py-1 md:py-2 px-2 md:px-6  text-[12px] md:text-[16px] text-white font-[600]">
           {{ channel.name }}
         </div>
       </div>
