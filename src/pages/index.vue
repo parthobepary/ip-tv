@@ -1,18 +1,30 @@
 <template>
-  <div>
-     <div>
-<!--       Logo Section-->
-       <logo />
-<!--       Hero Section -->
-       <Video/>
-<!--       Channel Section -->
-       <div class="container mx-auto grid  grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 py-16 gap-4 px-2 md:px-2">
-         <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
-           <channel-card :channel="channel" :index="i" />
-         </div>
-       </div>
+  <div class="container mx-auto ">
+    <div>
+      <!--       Logo Section-->
+      <logo />
+      <!--       Hero Section -->
+      <div>
+        <div class="grid grid-cols-5 bg-slate-500">
+          <div class="hidden md:block col-span-5 md:col-span-1 w-full">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, nam?</p>
+          </div>
+          <div class="col-span-5 md:col-span-3 w-full">
+            <Video />
+          </div>
+          <div class="col-span-5 md:col-span-1 w-full">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, nam?</p>
+          </div>
+        </div>
+      </div>
+      <!--       Channel Section -->
+      <div class="grid  grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 py-16 gap-4 px-2 md:px-2">
+        <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
+          <channel-card :channel="channel" :index="i" />
+        </div>
+      </div>
 
-     </div>
+    </div>
   </div>
 </template>
 
@@ -35,6 +47,4 @@ const channels = [
 ]
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
