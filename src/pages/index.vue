@@ -7,9 +7,14 @@
           <div class="bg-white hidden md:flex col-span-5 md:col-span-1 w-full  justify-center items-center">
             <p>For Add Section</p>
           </div>
+          <!-- external link video section -->
           <div class="col-span-5 md:col-span-3 w-full px-2 md:px-0 ">
-            <Video />
+            <AnotherVideo />
           </div>
+          <!-- live stream package section -->
+          <!-- <div class="col-span-5 md:col-span-3 w-full px-2 md:px-0 ">
+            <Video />
+          </div> -->
           <div
             class="bg-white col-span-5 md:col-span-1 md:w-full my-4 md:my-0 mx-2 md:mx-0 flex justify-center items-center ">
             <p>For Add Section</p>
