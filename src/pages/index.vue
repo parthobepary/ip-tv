@@ -16,17 +16,17 @@
           </div>
         </div>
       </div>
-      <div class="py-4 mb-3">
+      <div class="py-2 md:py-4 mb-3 ">
         <div
-          class="shadow-2xl mx-3 px-3 md:px-8 mt-4  inline-flex gap-x-3 md:gap-x-16 bg-gradient-to-r to-blue-500 from-cyan-500  rounded-r-2xl">
+          class="shadow-2xl bg-green-300  mx-3 px-3 md:px-8 mt-2 md:mt-4  inline-flex flex-wrap gap-x-3 md:gap-x-16 bg-gradient-to-r to-blue-500 from-cyan-500  rounded-r-2xl">
           <div v-for="(category, i) in categories" :key="i" class="relative">
             <button @click="toggleActive(i)"
               :class="isMatch === i ? 'active-button bg-gradient-to-r to-blue-500 from-blue-600' : ''"
-              class="text-white py-1  md:px-4  font-[600] ">{{ category.name }}</button>
+              class="text-white text-[12px] md:text-[16px] py-1  md:px-4  font-[600] ">{{ category.name }}</button>
           </div>
         </div>
       </div>
-      <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 py-8 px-2 md:px-2">
+      <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 py-8 px-2 md:px-3">
         <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
           <channel-card :channel="channel" :index="i" />
         </div>
@@ -92,6 +92,16 @@ const toggleActive = (index) => {
   bottom: -1.8rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .active-button::before {
+    content: "▼";
+    font-size: 20px;
+    color: #3985F5;
+    position: absolute;
+    right: 26%;
+    bottom: -20px;
+  }
+}
 
 .sticky {
   position: -webkit-sticky;
