@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       charset: "utf-16",
-      viewport: "width=500, initial-scale=1",
+      viewport: "width=device-width, initial-scale=1",
       title: "IP-TV",
       meta: [
         // <meta name="description" content="My amazing site">
@@ -31,7 +31,7 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
   },
-  css: ["~/assets/css/tailwind.css"],
+  css: ["~/assets/css/tailwind.css", "~/assets/css/main.css"],
   postcss: {
     plugins: {
       tailwindcss: {},
