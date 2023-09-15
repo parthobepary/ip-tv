@@ -20,17 +20,18 @@
             <p>For Add Section</p>
           </div>
         </div>
-      </div>
-      <div class="py-2 md:py-4 mb-3 ">
-        <div
-          class="shadow-2xl bg-green-300  mx-3 px-3 md:px-8 mt-2 md:mt-4  inline-flex flex-wrap gap-x-3 md:gap-x-16 bg-gradient-to-r to-blue-500 from-cyan-500  rounded-r-2xl">
-          <div v-for="(category, i) in categories" :key="i" class="relative">
-            <button @click="toggleActive(i)"
-              :class="isMatch === i ? 'active-button bg-gradient-to-r to-blue-500 from-blue-600' : ''"
-              class="text-white text-[12px] md:text-[16px] py-1  md:px-4  font-[600] ">{{ category.name }}</button>
+        <div class="py-2 md:py-4 mb-3 ">
+          <div
+            class="shadow-2xl bg-green-300  mx-3 px-3 md:px-8 mt-2 md:mt-4  inline-flex flex-wrap gap-x-3 md:gap-x-16 bg-gradient-to-r to-blue-500 from-cyan-500  rounded-r-2xl">
+            <div v-for="(category, i) in categories" :key="i" class="relative">
+              <button @click="toggleActive(i)"
+                :class="isMatch === i ? 'active-button bg-gradient-to-r to-blue-500 from-blue-600' : ''"
+                class="text-white text-[12px] md:text-[16px] py-1  md:px-4  font-[600] ">{{ category.name }}</button>
+            </div>
           </div>
         </div>
       </div>
+
       <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 py-8 px-2 md:px-3git ">
         <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
           <channel-card :channel="channel" :index="i" />
