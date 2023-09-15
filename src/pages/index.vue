@@ -26,7 +26,7 @@
           </div>
         </div>
       </div>
-      <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 py-8 px-2 md:px-3">
+      <div class="grid pt-2 grid-cols-3  xl:grid-cols-5 2xl:grid-cols-7 gap-4 py-8 px-2 md:px-3git ">
         <div v-for="(channel, i) in channels" :key="i" class=" flex justify-center">
           <channel-card :channel="channel" :index="i" />
         </div>
