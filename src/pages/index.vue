@@ -8,7 +8,7 @@
             <p>For Add Section</p>
           </div>
           <div class="col-span-5 md:col-span-3 w-full px-2 md:px-0 ">
-            <Video />
+            <AnotherVideo />
           </div>
           <div
             class="bg-white col-span-5 md:col-span-1 md:w-full my-4 md:my-0 mx-2 md:mx-0 flex justify-center items-center ">
